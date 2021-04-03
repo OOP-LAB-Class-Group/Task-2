@@ -9,7 +9,7 @@ class human {
   char *surname;
   int lenn, lens;
 
- public:
+public:
   human(char *pn, char *ps);
   ~human();
   void show();
@@ -19,6 +19,7 @@ human::human(char *pn, char *ps) {
   lenn = strlen(pn);
   lens = strlen(ps);
   name = (char *)malloc(lens + 1);
+  surname = ( char *)malloc( lens +1);
   if (!name || !surname) exit(1);
   strcpy(name, pn);
   strcpy(surname, ps);
