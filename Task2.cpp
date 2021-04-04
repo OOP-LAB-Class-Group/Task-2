@@ -19,7 +19,7 @@ human::human(char *pn, char *ps) {
   lenn = strlen(pn);
   lens = strlen(ps);
   name = (char *)malloc(lenn + 1);
-  surname = ( char *)malloc( lens +1);
+  surname = (char *)malloc(lens +1);
   if (!name || !surname) exit(1);
   strcpy(name, pn);
   strcpy(surname, ps);
@@ -31,7 +31,7 @@ human::~human() {
 };
 
 void human::show() {
-  cout << name << " "
+  cout << name << " " << surname
       << " - length: " << lenn + lens << endl;
 };
 
