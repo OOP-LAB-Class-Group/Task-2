@@ -8,8 +8,7 @@ class human {
   char *name;
   char *surname;
   int lenn, lens;
-
-public:
+  public:
   human(char *pn, char *ps);
   ~human();
   void show();
@@ -20,7 +19,7 @@ human::human(char *pn, char *ps) {
   lens = strlen(ps);
   name = (char *)malloc(lenn + 1);
   surname = (char *)malloc(lens +1);
-  if (!name || !surname) exit(1);
+  if (!name || !surname) exit(1); 
   strcpy(name, pn);
   strcpy(surname, ps);
 };
@@ -46,6 +45,7 @@ int main() {
   human s1(nm1, snm1), s2(nm2, snm2);
   s1.show();
   s2.show();
+  s2.~human();
   s2 = s1;
   s1.show();
   s2.show();
